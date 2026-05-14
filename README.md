@@ -2,7 +2,6 @@
 
 ## AIM
 To write an assembly language program in 8086 to rotate the motor at different speeds.
-
 ---
 
 ## APPARATUS REQUIRED
@@ -13,14 +12,12 @@ To write an assembly language program in 8086 to rotate the motor at different s
 | 2     | Power Supply                | +5 V DC, +12 V DC | 1      |
 | 3     | Stepper Motor Interface board | -             | 1        |
 | 4     | Stepper Motor               | -               | 1        |
-
 ---
 
 ## THEORY
 A motor in which the rotor is able to assume only discrete stationary angular positions is a **stepper motor**. The rotary motion occurs in a stepwise manner from one equilibrium position to the next.  
 
 **Two-phase scheme:** Any two adjacent stator windings are energized. There are two magnetic fields active in quadrature and none of the rotor pole faces can be in direct alignment with the stator poles. A partial but symmetric alignment of the rotor poles is of course possible.
-
 ---
 
 ## ALGORITHM
@@ -31,7 +28,6 @@ For running the stepper motor in clockwise and anticlockwise directions:
 3. Drive the stepper motor circuitry and introduce delay.  
 4. Decrement the counter. If not zero, repeat from step (iii).  
 5. Repeat the above procedure both for backward and forward directions.  
-
 ---
 
 ## SWITCHING SEQUENCE OF STEPPER MOTOR
@@ -42,11 +38,9 @@ For running the stepper motor in clockwise and anticlockwise directions:
 | 1201            | 0  | 1  | 0  | 1  | 05H      |
 | 1202            | 0  | 1  | 1  | 0  | 06H      |
 | 1203            | 1  | 0  | 1  | 0  | 0AH      |
-
 ---
 
 ## PROGRAM
-
 ```asm
 ; Stepper Motor Interfacing Program in 8086 Assembly
 
@@ -70,6 +64,9 @@ L1:      DEC DX
 DATA:    DB 09H, 05H, 06H, 0AH ; Array of data
 ```
 ## OUTPUT OF THE PROGRAM:
+<img width="800" height="800" alt="WhatsApp Image 2026-05-13 at 11 09 14 AM" src="https://github.com/user-attachments/assets/ac93c59d-b0ad-4472-abf8-4b77ccf1421b" />
+
+<img width="800" height="800" alt="WhatsApp Image 2026-05-13 at 11 09 15 AM" src="https://github.com/user-attachments/assets/9d88f97f-d6bb-460e-82cc-31af8ce115ca" />
 
 ## RESULT
 
